@@ -1,0 +1,128 @@
+header {
+    position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;                   /* 책 올릴 때 header 위로 올라가는 문제 해결 */
+}
+
+nav {
+    height: 130px;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.nav-logo {
+    display: flex;
+    margin-left: -1100px;
+    margin-top: -80px;
+    width: 200px;
+    height: 70px;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-list {
+    display: flex;
+    padding: 0;                     /* 내부 여백 제거 */
+}
+
+.nav-list img {
+    width: 80px;
+    height: 80px;
+    margin-top: -20px;
+}
+
+.nav-item {
+    margin-left: 15px;              /* 이미지 사이의 간격 조절 */
+}
+
+hr {
+    height: 3px;
+    background: #41B96F;
+    border: 0;
+    margin-top: -20px;
+}
+
+/* 선수단 글씨 이미지 */
+.playerteamImg{
+    display: flex;
+    margin-left: 20px;
+    margin-top: 160px;
+    width: 25vw;
+    height: 15vh;
+}
+
+.top {
+    margin-top: -25px;
+}
+
+/* 검색창 */
+.search {
+  position: relative;
+  margin-left: 350px;
+  margin-top: -60px;
+}
+
+.inputSearch {
+  width: 30vw;
+  border: 1px solid #bbb;
+  border-radius: 30px;
+  padding: 13px 25px;
+  font-size: 0.8rem;
+  box-shadow: -2px 1px 5px #bbb inset;
+}
+
+.searchImg {
+    position: absolute;
+    width: 2vw;
+    height: 4vh;
+    margin-left: -50px;
+    margin-top: 6px;
+}
+
+/* 코인 */
+.coin {
+    display: flex;
+    float: right;
+    margin-right: 300px;
+    margin-top: -45px;
+}
+
+.coinImg {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    margin-left: -15px;
+    margin-top: 3px;
+    object-fit: cover;
+}
+
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 11vw;
+    height: 2vw;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 30px;
+    box-shadow: 1px 2px 2px #bbb;
+}
+
+/* 장바구니 이미지 */
+.basketImg {
+    float: right;
+    width: 4.5vw;
+    height: 8vh;
+    margin-right: 200px;
+    margin-top: -55px;
+}
