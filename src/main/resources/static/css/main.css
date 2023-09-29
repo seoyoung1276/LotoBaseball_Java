@@ -1,0 +1,132 @@
+header {
+    position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;                   /* 책 올릴 때 header 위로 올라가는 문제 해결 */
+}
+
+nav {
+    height: 120px;
+}
+
+.nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #FFF;
+}
+
+.nav-logo {
+    display: flex;
+    margin-left: -1060px;
+    margin-top: -60px;
+    width: 200px;
+    height: 70px;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-list {
+    display: flex;
+    padding: 0;                     /* 내부 여백 제거 */
+}
+
+.nav-list img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-item {
+    margin-left: 15px;              /* 이미지 사이의 간격 조절 */
+}
+
+hr {
+    height: 3px;
+    background: #41B96F;
+    border: 0;
+    margin-top: 0;
+}
+
+main {
+    margin-top: calc(120px + 10px);
+}
+
+/* bootstrap icon */
+.icon-left,
+.icon-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2.4rem;
+    color: #292D32;
+    z-index: 1;
+    /* color: #8A8C8E; */
+}
+
+.icon-left {
+    float: left;
+    margin-top: 250px;
+    margin-left: 20px;
+}
+
+.icon-right {
+    float: right;
+    margin-top: 250px;
+    margin-right: 20px;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider span {
+  display: flex;
+  justify-content: center;
+}
+
+.slider img {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.flexslider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    margin-top: 100px;
+}
+
+.flex-control-nav {
+    display: flex;
+    position: static;
+    width: auto;
+    height: 18px;
+}
+
+.pagination li.flex-active {
+    width: 10px;
+    height: 10px;
+    background-color: #ED1C24;
+    border: 1px solid #ED1C24;
+}
+
+.pagination li,
+.pagination li.current {
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #929292;
+    background-color: transparent;
+    cursor: pointer;
+}
