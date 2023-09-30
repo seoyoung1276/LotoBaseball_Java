@@ -1,9 +1,9 @@
 header {
-    position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
+    position: fixed; /* 스크롤 해도 항상 위치 고정함 */
     top: 0;
     right: 0;
     left: 0;
-    z-index: 100;                   /* 책 올릴 때 header 위로 올라가는 문제 해결 */
+    z-index: 100; /* 책 올릴 때 header 위로 올라가는 문제 해결 */
 }
 
 nav {
@@ -55,46 +55,61 @@ main {
     margin-top: calc(120px + 10px);
 }
 
-/* bootstrap icon */
-.icon-left,
-.icon-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    font-size: 2.4rem;
-    color: #292D32;
-    z-index: 1;
-    /* color: #8A8C8E; */
-}
-
-.icon-left {
-    float: left;
-    margin-top: 250px;
-    margin-left: 20px;
-}
-
-.icon-right {
-    float: right;
-    margin-top: 250px;
-    margin-right: 20px;
-}
-
-.slider {
+.slide {
   display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  user-select: none; /* slide drag를 위해 DOM요소가 드래그로 선택되는것을 방지 */
 }
-
-.slider span {
+.slide_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0; /* flex item의 flex-shrink는 기본값이 1이므로 컨테이너 크기에 맞게 줄어드는데, 슬라이드를 구현할 것이므로 줄어들지 않도록 0을 준다. */
+  transition: left 1s;
+}
+.slide_button {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc(50% - 16px);
+  cursor: pointer;
 }
 
-.slider img {
-    display: block;
-    margin: 0 auto;
-    width: 100vw;
-    height: 70vh;
-    object-fit: cover;
+.slide_prev_button {
+  left: 10px;
+}
+.slide_next_button {
+  right: 10px;
+}
+
+.slide_button i {
+    font-size: 2rem;
+}
+
+/* 각 슬라이드가 변경되는 것을 시각적으로 확인하기 쉽도록 각 슬라이드별 색상 적용 */
+.slide_item.item1 {
+  background-color: darkgoldenrod;
+}
+.slide_item.item2 {
+  background-color: aqua;
+}
+.slide_item.item3 {
+  background-color: blueviolet;
+}
+.slide_item.item4 {
+  background-color: burlywood;
+}
+.slide_item.item5 {
+  background-color: cornflowerblue;
 }
 
 .flexslider-controls {
@@ -113,7 +128,7 @@ main {
     height: 18px;
 }
 
-.pagination li.flex-active {
+.pagination li. {
     width: 10px;
     height: 10px;
     background-color: #ED1C24;
@@ -130,3 +145,29 @@ main {
     background-color: transparent;
     cursor: pointer;
 }
+
+/*
+.flex-slider-controls {
+  position: relative;
+}
+
+.flex-control-nav {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  top: -30px;
+}
+
+.flex-control-nav li {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.flex-active {
+  background-color: red;
+}
+*/
