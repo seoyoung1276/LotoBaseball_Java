@@ -2,154 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" type="text/css" href="/static/css/join.css">
     <title>회원가입</title>
-
-    <!-- css -->
-    <style>
-        header {
-            position: fixed;                 /* 스크롤 해도 항상 위치 고정함 */
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 100;                   /* 책 올릴 때 header 위로 올라가는 문제 해결 */
-        }
-
-        nav {
-            height: 130px;
-        }
-
-        .nav.container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 16px;
-        }
-
-        .nav-logo {
-            display: flex;
-            margin-left: -1100px;
-            margin-top: -80px;
-            width: 200px;
-            height: 70px;
-        }
-
-        li {
-            list-style: none;
-        }
-
-       .nav-list {
-            display: flex;
-            padding: 0;                     /* 내부 여백 제거 */
-        }
-
-        .nav-list img {
-            width: 80px;
-            height: 80px;
-            margin-top: -20px;
-        }
-
-        .nav-item {
-            margin-left: 15px;              /* 이미지 사이의 간격 조절 */
-        }
-
-        hr {
-            height: 3px;
-            background: #41B96F;
-            border: 0;
-            margin-top: -20px;
-        }
-
-        p {
-            display: flex;
-            justify-content: center;
-            margin-top: 180px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            font-family: Pretendard;
-        }
-
-        h5 {
-            display: flex;
-            justify-content: center;
-            margin-top: 25px;
-            margin-right: 220px;
-            color: #a9a9a9;
-        }
-
-        .input_container {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .id_input {
-            width: 19vw;
-            height: 3vh;
-        }
-
-        .pw_input {
-            width: 19vw;
-            height: 3vh;
-        }
-
-        .email_input {
-            width: 9vw;
-            height: 3vh;
-        }
-
-        .domain_input {
-            width: 6.2vw;
-            height: 3vh;
-        }
-
-        .id_input,
-        .pw_input,
-        .email_input,
-        .domain_input {
-            padding: 10px;
-            margin: 5px;
-            margin-top: -15px;
-            border: 1px solid #ccc;
-            font-size: 1.2rem;
-        }
-
-        .input_container.email {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-            margin-left: -5px;
-        }
-
-        .input_container.email > h4 {
-            text-align: center;
-            margin-top: -5px;
-            margin-left: 5px;
-            margin-right: 6px;
-            font-weight: normal;
-            color: #a9a9a9;
-        }
-
-        .button_container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 25px;
-            margin-right: 5px;
-        }
-
-        button {
-            width: 20.6vw;
-            height: 5vh;
-            background-color: #41B96F;
-            color: #FFFFFF;
-            border-radius: 4px;
-            border: 0;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-    </style>
 
 </head>
 <body>
@@ -172,7 +27,7 @@
                 <li class="nav-item"><a href="" class="nav-link"><img src="images/club.jpg" alt=""></a></li>
 
                 <!-- FA 예약 이미지 -->
-                <li class="nav-item"><a href="" class="nav-link"><img src="images/FA.jpg" alt=""></a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link"><img src="images/FA.jpg" alt=""></a></li>
 
                 <!-- 마이페이지 이미지 -->
                 <li class="nav-item"><a href="" class="nav-link"><img src="images/mypage.jpg" alt=""></a></li>
@@ -189,35 +44,57 @@
         <p>회원가입</p>
 
         <!-- 아이디 입력창 -->
-        <h5 style="margin-left: -50px">아이디</h5>
-        <div class="input_container">
-            <input class="id_input" type="text">
-            <div class="error" id="idErrorMessage" style="visibility: hidden">아이디 에러 메시지</div>
+        <div class="id_container">
+            <h5 style="margin-left: -50px">아이디</h5>
+            <div class="input_container">
+                <input class="id_input" type="text">
+            </div>
         </div>
 
         <!-- 비밀번호 입력창 -->
-        <h5 style="margin-left: -40px">비밀번호</h5>
-        <div class="input_container">
-            <input class="pw_input" type="password">
-            <div class="error" id="pwErrorMessage" style="visibility: hidden">비밀번호 에러 메시지</div>
+        <div class="pw_container">
+            <h5 style="margin-left: -40px">비밀번호</h5>
+            <div class="input_container">
+                <input class="pw_input" type="password">
+            </div>
         </div>
 
         <!-- 이메일 입력창 -->
-        <h5 style="margin-left: -55px">이메일</h5>
-        <div class="input_container email">
-            <input class="email_input" type="text">
-            <h4>@</h4>
-            <input class="domain_input" type="text">
+        <div class="email_container">
+            <h5 style="margin-left: -190px">이메일</h5>
+            <div class="input_container email">
+                <input class="email_input" type="text">
+                <h4>@</h4>
+                <input class="domain_input" type="text">
+
+                <select class="domain">
+                    <option value="" disabled selected hidden></option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="self">직접입력</option>
+                </select>
+
+                <!-- 그림 아이콘 표시 -->
+                <div class="icon-container">
+                    <div class="icon-placeholder"></div>
+                </div>
+            </div>
         </div>
-        <div class="error" id="emailErrorMessage" style="visibility: hidden">이메일 에러 메시지</div>
+
+        <div class="error" id="ErrorMessage">에러 메시지</div>
 
         <!-- 회원가입 버튼 -->
-        <div class="button_container">
-            <!-- 버튼 클릭 시 로그인 화면으로 이동 -->
-            <button type="button" onclick="location.href='login.html'">회원가입</button>
+        <div class="join_container">
+            <div class="button_container">
+                <!-- 버튼 클릭 시 로그인 화면으로 이동 -->
+                <button type="button">회원가입</button>
+            </div>
         </div>
 
     </main>
+
+    <script src="/static/js/join.js"></script>
 
 </body>
 </html>
