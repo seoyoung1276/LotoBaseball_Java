@@ -180,13 +180,14 @@ hr {
     align-items: center;
     text-align: center;
     width: 4vw;
-    height: 3.7vh;
+    height: 4vh;
     background-color: #F5F5F5;
     border: none;
     border-radius: 30px;
     margin: 10px 5px;
     font-weight: bold;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .Pline_1,
@@ -201,7 +202,7 @@ hr {
 #posi_infielder,
 #posi_outfielder {
     width: 6vw;
-    height: 3.5vh;
+    height: 4vh;
     margin: 10px;
     padding: 2px;
 }
@@ -214,7 +215,7 @@ hr {
 
 #wishlist {
     width: 8vw;
-    height: 4vh;
+    height: 4.3vh;
     margin-top: 10px;
     margin-left: 35px;
     padding: 3px;
